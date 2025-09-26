@@ -1,0 +1,33 @@
+name: Fix stellar.toml images
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: # erlaubt manuelles Starten
+
+jobs:
+  fix-toml:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Replace image URLs in stellar.toml
+        run: |
+          FILE=".well-known/stellar.toml"
+          TARGET_URL="https://github.com/LibreXLM/librexlm.github.io/blob/main/LIBRE_PNG.jpg"
+          if [ -f "$FILE" ]; then
+            sed -i "s|image=.*|image=\"$TARGET_URL\"|g" $FILE
+            sed -i "s|ORG_LOGO=.*|ORG_LOGO=\"$TARGET_URL\"|g" $FILE
+          fi
+
+      - name: Commit changes if any
+        run: |
+          if ! git diff --quiet; then
+            git config --global user.name "LibreXLM Bot"
+            git config --global user.email "librexlm@users.noreply.github.com"
+            git add .well-known/stellar.toml
+            git commit -m "fix: unified all image URLs in stellar.toml"
+            git push
+          fi

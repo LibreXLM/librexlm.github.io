@@ -5,43 +5,54 @@
   <title>LibreXLM Assets</title>
   <style>
     body {
-      background-color: #111;
-      color: #e0e0e0;
+      background-color: #000;
+      color: #00ff66;
       font-family: "Courier New", monospace;
       margin: 20px;
     }
     h1 {
       color: #66ccff;
       text-align: center;
+      text-shadow: 0 0 8px #00ffff, 0 0 12px #003366;
+      margin-bottom: 10px;
+    }
+    p {
+      text-align: center;
+      color: #ccc;
     }
     table {
       width: 100%;
       border-collapse: collapse;
       margin-top: 20px;
+      border: 2px solid magenta;
+      box-shadow: 0 0 12px magenta;
     }
     th {
-      background-color: #222;
+      background-color: #111;
       color: #ffcc00;
       padding: 10px;
       text-align: left;
       font-size: 14px;
-      border-bottom: 2px solid #444;
+      border-bottom: 2px solid #ff00ff;
+      text-shadow: 0 0 5px #ff00ff;
     }
     td {
       padding: 8px;
-      border-bottom: 1px solid #333;
+      border-bottom: 1px dashed #333;
       vertical-align: top;
     }
     tr:nth-child(even) {
-      background-color: #1a1a1a;
+      background-color: #111;
     }
     .token a {
-      color: #66ccff;
+      color: #00ffff;
       font-weight: bold;
       text-decoration: none;
+      text-shadow: 0 0 5px #00ffff;
     }
     .token a:hover {
       color: #ff6699;
+      text-shadow: 0 0 8px #ff6699;
       text-decoration: underline;
     }
     .issuer {
@@ -58,12 +69,36 @@
       display: block;
       text-align: center;
       margin-top: 30px;
+      font-weight: bold;
+    }
+    .back a {
+      color: #ff00ff;
+      text-decoration: none;
+    }
+    .back a:hover {
+      color: #00ffff;
+      text-decoration: underline;
+    }
+    .marquee {
+      background: #111;
+      border: 1px solid #444;
+      padding: 6px;
+      margin: 15px 0;
+      font-weight: bold;
+      color: #ffccff;
+      box-shadow: 0 0 10px #ff00ff;
     }
   </style>
 </head>
 <body>
-  <h1>List of All Assets</h1>
-  <p style="text-align:center;">Each token links to its CleanShave detail page. Supply values are fetched live from the Stellar network.</p>
+  <h1>🌐 List of All Assets 🌐</h1>
+  <div class="marquee">
+    <marquee scrollamount="4">
+      🚀 LibreXLM Tokens ✦ Explore ✦ Trade ✦ Experiment ✦
+    </marquee>
+  </div>
+
+  <p>Each token links to its CleanShave detail page. Supply values are fetched live from the Stellar network.</p>
 
   <table id="assetTable">
     <tr>
@@ -79,7 +114,6 @@
   <script>
     const table = document.getElementById("assetTable");
 
-    // Zahl hübsch formatieren
     function formatNumber(num) {
       return Number(num).toLocaleString("en-US", { maximumFractionDigits: 2 });
     }

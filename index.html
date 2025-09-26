@@ -2,71 +2,119 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>LibreXLM</title>
+  <title>LibreTradingEcosystem</title>
   <style>
     body {
       background-color: black;
-      color: limegreen;
+      color: lime;
       font-family: "Courier New", monospace;
-      margin: 0;
-      padding: 0;
-      text-align: center;
+      margin: 20px;
     }
-
     h1 {
-      font-size: 3em;
-      margin-top: 50px;
       color: cyan;
-      text-shadow: 2px 2px magenta;
-      animation: blink 1s step-start infinite;
+      text-align: center;
+      text-shadow: 0 0 10px magenta, 0 0 20px blue;
     }
-
-    p {
-      font-size: 1.2em;
-      margin: 20px auto;
-      width: 80%;
+    h2 {
       color: yellow;
+      text-align: center;
+      margin-top: 10px;
     }
-
-    a {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 20px;
-      background: blue;
-      color: white;
+    .nav {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .nav a {
+      margin: 0 10px;
+      color: #ff00aa;
       text-decoration: none;
       font-weight: bold;
-      border: 3px double magenta;
     }
-
-    a:hover {
-      background: red;
-      color: black;
+    .nav a:hover {
+      text-decoration: underline;
+      color: #00ffff;
     }
-
-    img {
-      margin-top: 40px;
-      width: 200px;
-      border: 5px ridge limegreen;
+    .content {
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.6;
+      text-align: justify;
     }
-
+    .marquee {
+      background: darkblue;
+      color: white;
+      padding: 5px;
+      margin: 20px 0;
+      border: 2px solid magenta;
+      font-weight: bold;
+    }
+    .blink {
+      animation: blink 1s infinite;
+    }
     @keyframes blink {
-      50% {
-        opacity: 0;
-      }
+      0% { color: red; }
+      50% { color: yellow; }
+      100% { color: red; }
+    }
+    footer {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 12px;
+      color: gray;
     }
   </style>
 </head>
 <body>
-  <h1>WELCOME TO LIBREXLM</h1>
-  <p><marquee behavior="alternate" scrollamount="8">It’s all about Liquidity 💾</marquee></p>
-  <img src="LIBRE_PNG.jpg" alt="LibreXLM Logo">
 
-  <p><b>The LibreTradingEcosystem</b> is an experimental network of interconnected assets on the Stellar blockchain. Tokens continuously trade against each other in automated liquidity pools. The goal is to explore how coordinated trading activity, rebalancing, and compounding fees can generate emergent value over time.<br><br>
-  LibreXLM is not just a token, but a living experiment in decentralized liquidity dynamics.</p>
+  <h1>WELCOME TO THE LIBRE TRADING ECOSYSTEM</h1>
+  <h2 class="blink">It's ALL about Liquidity!</h2>
 
-  <a href="assets.html">List of all Assets</a>
+  <div class="nav">
+    <a href="index.html">Home</a> |
+    <a href="assets.html">List of all Assets</a> |
+    <a href="tutorial.html">How to create your first personal Token</a>
+  </div>
 
-  <p>Site best viewed in Netscape Navigator 3.0 😎</p>
+  <div class="marquee">
+    <marquee scrollamount="6" behavior="alternate">
+      🚀 Experimental Tokens ✦ Autonomous Trading ✦ Money Reimagined ✦ Join the Future 🚀
+    </marquee>
+  </div>
+
+  <div class="content">
+    <p>
+      The <b>LibreTradingEcosystem</b> is more than just an experiment on the Stellar network. 
+      It is a living, breathing system of interconnected assets that continuously trade 
+      against each other in automated liquidity pools.
+    </p>
+    <p>
+      Throughout history, money has been deeply tied to human relations and culture. 
+      Yet with the growth of modern capitalism and the expansion of money supply, 
+      money has become increasingly abstract, detached, and in many ways <span style="color:red;">dehumanized</span>. 
+      Capital became both an impersonal tool of accumulation and a force of discipline. 
+      What once was a social relation has turned into a system where value is measured 
+      in purely mechanical terms.
+    </p>
+    <p>
+      <span style="color:yellow;">Personal tokens</span> have the potential to change this. 
+      They can reintroduce identity, community, and creativity into the monetary sphere. 
+      A personal token is not just a medium of exchange – it is a representation of a person, 
+      a group, or an idea. It opens the door to new forms of value, where exchange is tied 
+      to relationships, recognition, and shared imagination.
+    </p>
+    <p>
+      In this sense, the LibreTradingEcosystem is a laboratory for rethinking money itself. 
+      It challenges the notion that money must be centralized, controlled, or growth-driven. 
+      Instead, it experiments with autonomy, volatility, and the possibility of creating 
+      a self-referential system of value.
+    </p>
+    <p style="text-align:center; margin-top:30px;">
+      👉 <a href="tutorial.html">Learn how to create your first personal Token</a> 👈
+    </p>
+  </div>
+
+  <footer>
+    LibreXLM © 2025 – Hosted on GitHub Pages
+  </footer>
 </body>
 </html>

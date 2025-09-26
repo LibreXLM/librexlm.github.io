@@ -867,3 +867,12 @@ is_asset_anchored=false
 is_unlimited=false
 anchor_asset="LibreToken"
 anchor_asset_type="crypto"
+
+[[CURRENCIES]]
+code="LibreTest"
+status="live"
+issuer="GADTKVHGJNR5HFCWNKQRMJQ44CXDHETPAFPG7XVG4WPTEQFWTLDADXMS"
+display_decimals=7
+name="LibreTest"
+desc="A test token for the LibreTradingSystem"
+image="https://librexlm.github.io/testlibre.png"

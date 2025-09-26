@@ -6,137 +6,99 @@
   <style>
     body {
       background-color: black;
-      color: limegreen;
+      color: lime;
       font-family: "Courier New", monospace;
       margin: 20px;
     }
     h1 {
       color: cyan;
-      text-shadow: 1px 1px magenta;
+      text-shadow: 0 0 5px magenta;
       text-align: center;
     }
-    h2 {
-      margin-top: 40px;
-      color: yellow;
-      border-bottom: 2px solid magenta;
-      padding-bottom: 5px;
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
     }
-    ul {
-      list-style-type: square;
-      margin-left: 20px;
+    th, td {
+      border: 1px solid magenta;
+      padding: 8px;
+      text-align: left;
     }
-    li {
-      margin: 4px 0;
+    th {
+      background-color: darkblue;
+      color: white;
     }
     a {
       color: cyan;
+      text-decoration: none;
     }
     a:hover {
       color: magenta;
+      text-decoration: underline;
     }
     .back {
       display: block;
       text-align: center;
-      margin-top: 40px;
+      margin-top: 30px;
     }
   </style>
 </head>
 <body>
   <h1>List of All Assets</h1>
+  <p>Each token links to its CleanShave detail page. Supply values are fetched live from the Stellar network.</p>
 
-  <h2>Issuer: GAYCCWKECNGDRHYU3UTREBD2XLC3CUQN6FV22TKM4WCQER3IWR7TF5CY</h2>
-  <ul>
-    <li>LIBRE</li>
-  </ul>
+  <table id="assetTable">
+    <tr>
+      <th>Token</th>
+      <th>Issuer</th>
+      <th>Total Supply</th>
+    </tr>
+  </table>
 
-  <h2>Issuer: GBVYKIM4QGW7NK3Q5S76GWMZMLAWYB6FB43JQ4J7ZOXHAA3LEZZGYHSD</h2>
-  <ul>
-    <li>ReverseLibre</li>
-    <li>LibreVolume</li>
-    <li>yZOMB</li>
-    <li>yFRED</li>
-    <li>yLMT</li>
-    <li>yLUMOS</li>
-    <li>maxBREAD</li>
-    <li>200XLM</li>
-    <li>yDWARF</li>
-    <li>100XLM</li>
-    <li>not100XLM</li>
-    <li>yTATT</li>
-    <li>yBBOI</li>
-    <li>yGRACE</li>
-    <li>Libre420</li>
-  </ul>
+  <!-- hier bindest du die Asset-Liste ein -->
+  <script src="assets.js"></script>
 
-  <h2>Issuer: GBXN3ONPRC4TX4CQFYAOCMSFCZSUTR2U3GJWCVQ27Z2OKFWTW42HE2ZK</h2>
-  <ul>
-    <li>MOONSHOT</li>
-    <li>ANUSINU</li>
-    <li>ShitCoin</li>
-    <li>FruityDude</li>
-    <li>YLM</li>
-    <li>LOVE</li>
-  </ul>
+  <script>
+    const table = document.getElementById("assetTable");
 
-  <h2>Issuer: GANIPXJRN6TSH7354OGYH4XS5P6L72MFTZ32BGHIOB2H6JD3MLJCPUXQ</h2>
-  <ul>
-    <li>BuyMoreLibre</li>
-    <li>LIBRE7</li>
-    <li>LIBRE6</li>
-    <li>LIBRE5</li>
-    <li>LIBRE4</li>
-    <li>LIBRE3</li>
-    <li>LIBRE2</li>
-    <li>LIBRE1</li>
-    <li>yZONE</li>
-    <li>xSTK</li>
-    <li>NoLimitLibre</li>
-    <li>ySTK</li>
-    <li>yFUN</li>
-    <li>BuyLibre</li>
-    <li>aLibre</li>
-    <li>1090</li>
-    <li>HEDGE</li>
-    <li>random</li>
-    <li>yPYCByDeCent</li>
-    <li>yANGN</li>
-    <li>yLIBRE</li>
-    <li>zLIBRE</li>
-  </ul>
+    assets.forEach(asset => {
+      const row = document.createElement("tr");
 
-  <h2>Issuer: GD3ACA6FPINT4FDAA3YKR5M5OCDQ5NOQ24VW4TUMGKFENOLYO37UOD7Q</h2>
-  <ul>
-    <li>NFTInu</li>
-    <li>xyz</li>
-    <li>anAfrican</li>
-    <li>aDic</li>
-    <li>SBEZZY</li>
-    <li>212121212121</li>
-  </ul>
+      // Token Name + CleanShave-Link
+      const tokenCell = document.createElement("td");
+      const link = document.createElement("a");
+      link.href = `https://cleanshave.org/tool/asset-detail.html?code=${asset.code}&issuer=${asset.issuer}`;
+      link.textContent = asset.code;
+      tokenCell.appendChild(link);
 
-  <h2>Issuer: GAGG42ACMQ3454R7GB6JUAKU6OPT4EXPW4QWYKEKBVYDQJC3ELGW74AX</h2>
-  <ul>
-    <li>1312</li>
-    <li>NoLibreToken</li>
-    <li>xLSPx</li>
-    <li>HODL</li>
-    <li>DiemLibre</li>
-    <li>xxXLM</li>
-  </ul>
+      // Issuer
+      const issuerCell = document.createElement("td");
+      issuerCell.textContent = asset.issuer;
 
-  <h2>Issuer: GBJEIA7DSCBQS37XH6NYBVDVF6DDYM33DJRP6PIQQQNBQLSHHCUKVIDS</h2>
-  <ul>
-    <li>DasKapital</li>
-  </ul>
+      // Supply (live von Horizon holen)
+      const supplyCell = document.createElement("td");
+      supplyCell.textContent = "Loading…";
+      fetch(`https://horizon.stellar.org/assets?asset_code=${asset.code}&asset_issuer=${asset.issuer}`)
+        .then(r => r.json())
+        .then(d => {
+          if (d._embedded.records.length > 0) {
+            supplyCell.textContent = d._embedded.records[0].amount;
+          } else {
+            supplyCell.textContent = "n/a";
+          }
+        })
+        .catch(() => { supplyCell.textContent = "error"; });
 
-  <h2>Issuer: GDID3VFXZ6BZXIBVCQXUYVUEOVPZHNBQUGDNZ43GIYD2F4QM2YBO4MF5</h2>
-  <ul>
-    <li>LibreVault</li>
-    <li>LIBRE</li>
-    <li>Librequidity</li>
-    <li>LibreToken</li>
-  </ul>
+      // alles in die Tabelle packen
+      row.appendChild(tokenCell);
+      row.appendChild(issuerCell);
+      row.appendChild(supplyCell);
+      table.appendChild(row);
+    });
+  </script>
 
   <p class="back"><a href="index.html">⬅ Back to Home</a></p>
 </body>
 </html>
+

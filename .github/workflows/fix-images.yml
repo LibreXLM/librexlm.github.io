@@ -1,0 +1,24 @@
+name: Fix TOML Images
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  replace:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Replace all image URLs with LIBRE_PNG.jpg
+        run: |
+          sed -i 's|image=.*|image="https://librexlm.github.io/img/LIBRE_PNG.jpg"|' .well-known/stellar.toml
+
+      - name: Commit changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .well-known/stellar.toml
+          git commit -m "fix: unify images to LIBRE_PNG.jpg" || echo "No changes"
+          git push

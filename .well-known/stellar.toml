@@ -44,54 +44,207 @@ code="ReverseLibre"
 status="live"
 issuer="GBVYKIM4QGW7NK3Q5S76GWMZMLAWYB6FB43JQ4J7ZOXHAA3LEZZGYHSD"
 display_decimals=7
-name="ReverseLibre"
-desc="A counter-experimental token within the LibreTradingEcosystem."
-conditions="Purely experimental asset. No claim to value or stability."
+name="Reverse Libre"
+desc="Counter-experimental token within the LibreTradingEcosystem."
+conditions="Experimental token, not intended for speculation or financial use."
 image="https://librexlm.github.io/img/LIBRE_PNG.jpg"
 is_asset_anchored=false
 is_unlimited=false
-anchor_asset="REVERSELIBRE"
+anchor_asset="ReverseLibre"
 anchor_asset_type="crypto"
 
 [[CURRENCIES]]
-code="MOONSHOT"
+code="LibreVolume"
 status="live"
 issuer="GBVYKIM4QGW7NK3Q5S76GWMZMLAWYB6FB43JQ4J7ZOXHAA3LEZZGYHSD"
 display_decimals=7
-name="Moonshot"
-desc="Speculative experimental token created in the Libre ecosystem."
-conditions="Not a financial product. Created for community experimentation only."
+name="Libre Volume"
+desc="Token representing volume dynamics in the Libre ecosystem."
+conditions="Experimental token measuring liquidity volume. Not a financial product."
 image="https://librexlm.github.io/img/LIBRE_PNG.jpg"
 is_asset_anchored=false
-is_unlimited=false
-anchor_asset="MOONSHOT"
+is_unlimited=true
+anchor_asset="LibreVolume"
 anchor_asset_type="crypto"
 
 [[CURRENCIES]]
-code="ANUSINU"
+code="yZOMB"
 status="live"
 issuer="GBVYKIM4QGW7NK3Q5S76GWMZMLAWYB6FB43JQ4J7ZOXHAA3LEZZGYHSD"
 display_decimals=7
-name="Anus Inu"
-desc="A meme-inspired asset circulating within the LibreTradingEcosystem."
-conditions="Has no financial or intrinsic value. Exists purely as a cultural and community-driven asset."
+name="yZOMB"
+desc="An experimental yield-style pool token in the Libre ecosystem."
+conditions="Created to explore compounding pool mechanics. No intrinsic value."
 image="https://librexlm.github.io/img/LIBRE_PNG.jpg"
 is_asset_anchored=false
-is_unlimited=false
-anchor_asset="ANUSINU"
+is_unlimited=true
+anchor_asset="yZOMB"
 anchor_asset_type="crypto"
 
 [[CURRENCIES]]
-code="SHITCOIN"
+code="yFRED"
 status="live"
 issuer="GBVYKIM4QGW7NK3Q5S76GWMZMLAWYB6FB43JQ4J7ZOXHAA3LEZZGYHSD"
 display_decimals=7
-name="Shitcoin"
-desc="Parody asset to highlight risks of unregulated token creation."
-conditions="Carries no actual value, not an investment, purely humorous in intent."
+name="yFRED"
+desc="Experimental asset named yFRED within Libre ecosystem."
+conditions="Experimental token without guarantees or backing."
 image="https://librexlm.github.io/img/LIBRE_PNG.jpg"
 is_asset_anchored=false
-is_unlimited=false
-anchor_asset="SHITCOIN"
+is_unlimited=true
+anchor_asset="yFRED"
 anchor_asset_type="crypto"
 
+[[CURRENCIES]]
+code="yLMT"
+status="live"
+issuer="GBVYKIM4QGW7NK3Q5S76GWMZMLAWYB6FB43JQ4J7ZOXHAA3LEZZGYHSD"
+display_decimals=7
+name="yLMT"
+desc="Token exploring liquidity mining trends within the Libre ecosystem."
+conditions="Experimental token for studying AMM and yield behavior."
+image="https://librexlm.github.io/img/LIBRE_PNG.jpg"
+is_asset_anchored=false
+is_unlimited=true
+anchor_asset="yLMT"
+anchor_asset_type="crypto"
+
+[[CURRENCIES]]
+code="yLUMOS"
+status="live"
+issuer="GBVYKIM4QGW7NK3Q5S76GWMZMLAWYB6FB43JQ4J7ZOXHAA3LEZZGYHSD"
+display_decimals=7
+name="yLUMOS"
+desc="Experimental token symbolizing 'light' in the Libre ecosystem."
+conditions="Community experiment. Carries no financial rights."
+image="https://librexlm.github.io/img/LIBRE_PNG.jpg"
+is_asset_anchored=false
+is_unlimited=true
+anchor_asset="yLUMOS"
+anchor_asset_type="crypto"
+
+[[CURRENCIES]]
+code="maxBREAD"
+status="live"
+issuer="GBVYKIM4QGW7NK3Q5S76GWMZMLAWYB6FB43JQ4J7ZOXHAA3LEZZGYHSD"
+display_decimals=7
+name="maxBREAD"
+desc="Meme-style experimental token within Libre."
+conditions="Exists purely for community experiment. No guarantees."
+image="https://librexlm.github.io/img/LIBRE_PNG.jpg"
+is_asset_anchored=false
+is_unlimited=true
+anchor_asset="maxBREAD"
+anchor_asset_type="crypto"
+
+[[CURRENCIES]]
+code="200XLM"
+status="live"
+issuer="GBVYKIM4QGW7NK3Q5S76GWMZMLAWYB6FB43JQ4J7ZOXHAA3LEZZGYHSD"
+display_decimals=7
+name="200XLM"
+desc="Experimental asset named after 200XLM, within Libre ecosystem."
+conditions="Token has no direct backing by XLM. Purely experimental."
+image="https://librexlm.github.io/img/LIBRE_PNG.jpg"
+is_asset_anchored=false
+is_unlimited=true
+anchor_asset="200XLM"
+anchor_asset_type="crypto"
+
+[[CURRENCIES]]
+code="yDWARF"
+status="live"
+issuer="GBVYKIM4QGW7NK3Q5S76GWMZMLAWYB6FB43JQ4J7ZOXHAA3LEZZGYHSD"
+display_decimals=7
+name="yDWARF"
+desc="Experimental yield token yDWARF."
+conditions="Libre ecosystem experiment. No real-world value."
+image="https://librexlm.github.io/img/LIBRE_PNG.jpg"
+is_asset_anchored=false
+is_unlimited=true
+anchor_asset="yDWARF"
+anchor_asset_type="crypto"
+
+[[CURRENCIES]]
+code="100XLM"
+status="live"
+issuer="GBVYKIM4QGW7NK3Q5S76GWMZMLAWYB6FB43JQ4J7ZOXHAA3LEZZGYHSD"
+display_decimals=7
+name="100XLM"
+desc="Experimental asset named after 100XLM, within Libre ecosystem."
+conditions="Token has no direct backing by XLM. Purely experimental."
+image="https://librexlm.github.io/img/LIBRE_PNG.jpg"
+is_asset_anchored=false
+is_unlimited=true
+anchor_asset="100XLM"
+anchor_asset_type="crypto"
+
+[[CURRENCIES]]
+code="not100XLM"
+status="live"
+issuer="GBVYKIM4QGW7NK3Q5S76GWMZMLAWYB6FB43JQ4J7ZOXHAA3LEZZGYHSD"
+display_decimals=7
+name="not100XLM"
+desc="Parody token 'not100XLM' within Libre ecosystem."
+conditions="Does not represent or redeem any XLM. Purely experimental."
+image="https://librexlm.github.io/img/LIBRE_PNG.jpg"
+is_asset_anchored=false
+is_unlimited=true
+anchor_asset="not100XLM"
+anchor_asset_type="crypto"
+
+[[CURRENCIES]]
+code="yTATT"
+status="live"
+issuer="GBVYKIM4QGW7NK3Q5S76GWMZMLAWYB6FB43JQ4J7ZOXHAA3LEZZGYHSD"
+display_decimals=7
+name="yTATT"
+desc="Experimental yield-style token yTATT."
+conditions="Libre ecosystem token. No value guaranteed."
+image="https://librexlm.github.io/img/LIBRE_PNG.jpg"
+is_asset_anchored=false
+is_unlimited=true
+anchor_asset="yTATT"
+anchor_asset_type="crypto"
+
+[[CURRENCIES]]
+code="yBBOI"
+status="live"
+issuer="GBVYKIM4QGW7NK3Q5S76GWMZMLAWYB6FB43JQ4J7ZOXHAA3LEZZGYHSD"
+display_decimals=7
+name="yBBOI"
+desc="Experimental yield-style token yBBOI."
+conditions="Libre ecosystem token. No value guaranteed."
+image="https://librexlm.github.io/img/LIBRE_PNG.jpg"
+is_asset_anchored=false
+is_unlimited=true
+anchor_asset="yBBOI"
+anchor_asset_type="crypto"
+
+[[CURRENCIES]]
+code="yGRACE"
+status="live"
+issuer="GBVYKIM4QGW7NK3Q5S76GWMZMLAWYB6FB43JQ4J7ZOXHAA3LEZZGYHSD"
+display_decimals=7
+name="yGRACE"
+desc="Experimental yield-style token yGRACE."
+conditions="Libre ecosystem token. No value guaranteed."
+image="https://librexlm.github.io/img/LIBRE_PNG.jpg"
+is_asset_anchored=false
+is_unlimited=true
+anchor_asset="yGRACE"
+anchor_asset_type="crypto"
+
+[[CURRENCIES]]
+code="Libre420"
+status="live"
+issuer="GBVYKIM4QGW7NK3Q5S76GWMZMLAWYB6FB43JQ4J7ZOXHAA3LEZZGYHSD"
+display_decimals=7
+name="Libre420"
+desc="Experimental meme token Libre420."
+conditions="Community fun token. Purely symbolic."
+image="https://librexlm.github.io/img/LIBRE_PNG.jpg"
+is_asset_anchored=false
+is_unlimited=true
+anchor_asset="Libre420"
+anchor_asset_type="crypto"

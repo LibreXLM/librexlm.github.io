@@ -13,7 +13,7 @@ jobs:
 
       - name: Replace all image URLs with LIBRE_PNG.jpg
         run: |
-          sed -i 's|image=.*|image="https://librexlm.github.io/img/LIBRE_PNG.jpg"|' .well-known/stellar.toml
+          sed -i 's|image=.*|image="https://github.com/LibreXLM/librexlm.github.io/blob/f3bdf18dbae1109a2d40604db6ca44fb667b6eb3/LIBRE_PNG.jpg"|' .well-known/stellar.toml
 
       - name: Commit changes
         run: |
